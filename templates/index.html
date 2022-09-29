@@ -1,0 +1,11 @@
+<form action = "/" method = "POST" name = "idform">
+    <input type = "text" name = "id" placeholder = "Student ID">
+    <input type = "submit" name = "submitid" value = "submit">
+</form> 
+{% with messages = get_flashed_messages(with_categories=False) %}
+    {% if messages %}
+    {% for message in messages %}
+      <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %} 
+{% endwith %}
